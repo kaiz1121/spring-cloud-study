@@ -1,0 +1,10 @@
+rootProject.name = 'kaiz_cloud'
+//include 'study-eureka','study-eureka:service-registry','study-eureka:user-service','study-eureka:product-service'
+include 'study-eureka'
+include 'study-eureka:service-registry'
+findProject(':study-eureka:service-registry')?.name = 'service-registry'
+include 'study-eureka:user-service'
+findProject(':study-eureka:user-service')?.name = 'user-service'
+include 'study-eureka:product-service'
+findProject(':study-eureka:product-service')?.name = 'product-service'
+
