@@ -1,0 +1,14 @@
+**/.gradle/*
+**/build/*
+.project
+.classpath
+**/.settings
+**/.git
+**/.calss
+**/bin
+**/.class
+**/out
+*.class
+.idea/
+*.iml
+**/node_modules/
