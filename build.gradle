@@ -41,7 +41,15 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     dependencies {
         compile ('org.springframework.boot:spring-boot-starter-web')
+        compile('org.springframework.boot:spring-boot-starter-data-jpa')
         testCompile('org.springframework.boot:spring-boot-starter-test')
+        compile ("mysql:mysql-connector-java:5.1.24")
+        runtime("mysql:mysql-connector-java")
+        compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+        compile group: 'com.alibaba', name: 'druid', version:'1.1.10'
+        compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+        compile group: 'com.google.guava', name: 'guava', version: '24.1-jre'
+        compile group: 'ma.glasnost.orika', name: 'orika-core', version: '1.5.2'
     }
     dependencyManagement {
         imports {

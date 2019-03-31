@@ -7,4 +7,6 @@ include 'study-eureka:user-service'
 findProject(':study-eureka:user-service')?.name = 'user-service'
 include 'study-eureka:product-service'
 findProject(':study-eureka:product-service')?.name = 'product-service'
+include 'study-eureka:product_order-service'
+findProject(':study-eureka:product_order-service')?.name = 'product_order-service'
 
