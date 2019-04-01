@@ -12,5 +12,6 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
-
+    //引入负载均衡ribbon
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '1.4.6.RELEASE'
 }

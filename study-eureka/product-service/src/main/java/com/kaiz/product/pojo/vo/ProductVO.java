@@ -14,6 +14,16 @@ public class ProductVO implements Serializable {
     private String productName;
     private String price;
 
+    private String productServicePort;
+
+    public String getProductServicePort() {
+        return productServicePort;
+    }
+
+    public void setProductServicePort(String productServicePort) {
+        this.productServicePort = productServicePort;
+    }
+
     public Integer getProductId() {
         return productId;
     }

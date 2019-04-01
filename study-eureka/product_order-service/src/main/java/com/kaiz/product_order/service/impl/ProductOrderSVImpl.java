@@ -29,6 +29,7 @@ public class ProductOrderSVImpl implements IProductOrderSV {
     private ProductOrderDao productOrderDao;
 
     @Autowired
+    @Qualifier(value = "restTemplate")
     private RestOperations restTemplate;
 
 
@@ -40,10 +41,12 @@ public class ProductOrderSVImpl implements IProductOrderSV {
             UserDto userDto = this.restTemplate.getForEntity("http://USER-SERVICE/users/{userId}", UserDto.class, productOrderVO.getUserId()).getBody();
             if (null !=userDto){
                 productOrderVO.setUserName(userDto.getUserName());
+                productOrderVO.setUserServicePort(userDto.getUserServicePort());
             }
             ProductDto productDto = this.restTemplate.getForEntity("http://PRODUCT-SERVICE/products/{productId}", ProductDto.class, productOrderVO.getProductId()).getBody();
             if (null !=productDto){
                 productOrderVO.setProductName(productDto.getProductName());
+                productOrderVO.setProductServicePort(productDto.getProductServicePort());
             }
             return productOrderVO;
         }

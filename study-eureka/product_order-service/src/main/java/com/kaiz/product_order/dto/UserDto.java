@@ -12,6 +12,16 @@ import java.io.Serializable;
 public class UserDto implements Serializable {
     private Integer userId;
     private String userName;
+    //设置端口号，可以看出ribbon默认负载均衡策略为轮询
+    private String userServicePort;
+
+    public String getUserServicePort() {
+        return userServicePort;
+    }
+
+    public void setUserServicePort(String userServicePort) {
+        this.userServicePort = userServicePort;
+    }
 
     public Integer getUserId() {
         return userId;

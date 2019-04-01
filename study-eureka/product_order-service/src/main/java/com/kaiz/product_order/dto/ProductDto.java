@@ -12,6 +12,15 @@ import java.io.Serializable;
 public class ProductDto implements Serializable {
     private Integer productId;
     private String productName;
+    private String productServicePort;
+
+    public String getProductServicePort() {
+        return productServicePort;
+    }
+
+    public void setProductServicePort(String productServicePort) {
+        this.productServicePort = productServicePort;
+    }
 
     public Integer getProductId() {
         return productId;

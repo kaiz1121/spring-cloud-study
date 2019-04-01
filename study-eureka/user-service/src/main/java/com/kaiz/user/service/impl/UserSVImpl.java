@@ -6,6 +6,7 @@ import com.kaiz.user.pojo.vo.UserVO;
 import com.kaiz.user.service.interfaces.IUserSV;
 import com.kaiz.user.utils.BeanMapperUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,11 +23,16 @@ public class UserSVImpl implements IUserSV{
     @Autowired
     private UserDao userDao;
 
+    @Value("${server.port}")
+    private String serverPort;
+
     @Override
     public UserVO getUserById(Integer userId){
         UserPO userPO = userDao.getOne(userId);
         if (null !=userPO){
-            return BeanMapperUtil.map(userPO,UserVO.class);
+            UserVO userVO = BeanMapperUtil.map(userPO,UserVO.class);
+            userVO.setUserServicePort(serverPort);
+            return userVO;
         }
         return null;
     }

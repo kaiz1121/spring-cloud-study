@@ -14,6 +14,16 @@ public class UserVO implements Serializable {
     private String userName;
     private String password;
 
+    private String userServicePort;
+
+    public String getUserServicePort() {
+        return userServicePort;
+    }
+
+    public void setUserServicePort(String userServicePort) {
+        this.userServicePort = userServicePort;
+    }
+
     public Integer getUserId() {
         return userId;
     }

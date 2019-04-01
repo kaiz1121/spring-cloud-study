@@ -13,8 +13,10 @@ public class ProductOrderVO implements Serializable {
     private Integer orderId;
     private Integer productId;
     private String productName;
+    private String productServicePort;
     private Integer userId;
-    protected String userName;
+    private String userName;
+    private String userServicePort;
 
     public Integer getOrderId() {
         return orderId;
@@ -40,6 +42,14 @@ public class ProductOrderVO implements Serializable {
         this.productName = productName;
     }
 
+    public String getProductServicePort() {
+        return productServicePort;
+    }
+
+    public void setProductServicePort(String productServicePort) {
+        this.productServicePort = productServicePort;
+    }
+
     public Integer getUserId() {
         return userId;
     }
@@ -54,5 +64,13 @@ public class ProductOrderVO implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getUserServicePort() {
+        return userServicePort;
+    }
+
+    public void setUserServicePort(String userServicePort) {
+        this.userServicePort = userServicePort;
     }
 }

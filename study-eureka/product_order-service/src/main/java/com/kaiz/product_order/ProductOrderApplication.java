@@ -26,15 +26,16 @@ import org.springframework.web.client.RestTemplate;
 public class ProductOrderApplication {
 
     //方式一 --restTemplate
-//    @Bean(value = "restTemplate")
-//    RestTemplate restTemplate() {
-//        return new RestTemplate();
-//    }
-    @Bean
+    @Bean(value = "restTemplate")
     @LoadBalanced
-    RestOperations restTemplate(RestTemplateBuilder builder) {
-        return builder.build();
+    RestTemplate restTemplate() {
+        return new RestTemplate();
     }
+//    @Bean
+//    @LoadBalanced
+//    Rest restTemplate(RestTemplateBuilder builder) {
+//        return builder.build();
+//    }
     public static void main(String[] args) {
         SpringApplication.run(ProductOrderApplication.class, args);
     }
