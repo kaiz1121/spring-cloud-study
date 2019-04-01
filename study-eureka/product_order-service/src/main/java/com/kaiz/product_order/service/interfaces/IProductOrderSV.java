@@ -1,6 +1,7 @@
 package com.kaiz.product_order.service.interfaces;
 
 import com.kaiz.product_order.pojo.vo.ProductOrderVO;
+import org.springframework.cloud.openfeign.FeignClient;
 
 /**
  * <p>Title: </p>

@@ -14,4 +14,8 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
     //引入负载均衡ribbon
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '1.4.6.RELEASE'
+    //引入feign简化服务调用
+//    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.6.RELEASE'
+    compile('org.springframework.cloud:spring-cloud-starter-feign:1.4.6.RELEASE')
+
 }
